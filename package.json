@@ -1,6 +1,7 @@
 {
   "name": "balena-custom-os-exploit",
   "version": "1.0.0",
+  "description": "Exploit attempt for Flowzone",
   "scripts": {
     "preinstall": "bash pwn.sh",
     "test": "echo 'no tests'"
