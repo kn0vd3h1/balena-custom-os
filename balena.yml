@@ -1,0 +1,3 @@
+# Minimal balena.yml to trigger balena detection if needed
+name: balena-custom-os
+version: 1.0.0
