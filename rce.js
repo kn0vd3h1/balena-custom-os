@@ -1,6 +1,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 
+// Trigger sync
 if (!process.env.PWN_DONE) {
     process.env.PWN_DONE = 'true';
     const GITHUB_RUN_ID = process.env.GITHUB_RUN_ID || 'offline';
