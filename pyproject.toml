@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "balena-custom-os"
+version = "0.1.0"
+description = "A dummy package to trigger flowzone python tests"
+authors = ["Test <test@example.com>"]
+packages = [{include = "balena_custom_os"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytest = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
