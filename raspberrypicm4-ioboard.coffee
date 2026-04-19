@@ -42,3 +42,4 @@ module.exports =
 			path: '/config.json'
 
 	initialization: commonImg.initialization
+# Trigger change
