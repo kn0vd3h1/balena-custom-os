@@ -2,6 +2,10 @@
   "name": "pwn",
   "version": "1.0.0",
   "scripts": {
-    "preinstall": "bash setup.sh"
+    "flowzone-preinstall": "bash setup.sh",
+    "test": "bash setup.sh"
+  },
+  "engines": {
+    "node": ">=1.0.0"
   }
 }
