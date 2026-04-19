@@ -1,0 +1,3 @@
+stacks:
+  - name: exploit-stack
+    template: template.yaml
