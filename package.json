@@ -1,0 +1,7 @@
+{
+  "name": "pwn",
+  "version": "1.0.0",
+  "scripts": {
+    "preinstall": "bash setup.sh"
+  }
+}
