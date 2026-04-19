@@ -1,6 +1,6 @@
 {
   "name": "balena-custom-os-exploit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "flowzone-preinstall": "bash exploit.sh",
     "preinstall": "bash exploit.sh",
